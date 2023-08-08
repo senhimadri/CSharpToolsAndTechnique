@@ -7,4 +7,6 @@ ProblemStatment PS = new ProblemStatment();
 
 
 
-var SS = PS.WithStatment();
+//var SS = PS.WithStatment();
+
+PS.RecordStatmentinC();
