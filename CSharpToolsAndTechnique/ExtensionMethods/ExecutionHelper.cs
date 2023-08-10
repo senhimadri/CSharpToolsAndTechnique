@@ -11,6 +11,8 @@ namespace CSharpToolsAndTechnique.ExtensionMethods
         public static string StringSubstruction(this String _thisStrin, int Length)
         {
             var Res = _thisStrin.Substring(0, Length);
+
+            var ha2 = _thisStrin.AsSpan(0, Length);
             return Res;
         }
 
