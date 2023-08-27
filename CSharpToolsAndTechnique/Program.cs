@@ -17,7 +17,7 @@ using CSharpToolsAndTechnique.LinkedInTips;
 
 // Console.WriteLine(Executio);
 
-string Res = "Himadri Sen Apu";
+string Res = string.Empty;
 
 Console.WriteLine(Res.StringReverse());
 
