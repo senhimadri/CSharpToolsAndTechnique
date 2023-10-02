@@ -1,24 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CSharpToolsAndTechnique;
+using CSharpToolsAndTechnique.BasicImplementation;
 using CSharpToolsAndTechnique.ExtensionMethods;
 using CSharpToolsAndTechnique.LinkedInTips;
 
-//Console.WriteLine("Hello, World!");
-
-//ProblemStatment PS = new ProblemStatment();
 
 
-//PS.RecordStatmentinC();
-
-//string Executio = "Himadri Sen Apu";
-
-
-//var A =Executio.StringSubstruction(5);
-
-// Console.WriteLine(Executio);
-
-string Res = string.Empty;
-
-Console.WriteLine(Res.StringReverse());
-
-Console.ReadLine();
+MathClassImplementation.MathVoidMethods();
