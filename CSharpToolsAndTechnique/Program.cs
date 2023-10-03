@@ -3,7 +3,10 @@ using CSharpToolsAndTechnique;
 using CSharpToolsAndTechnique.BasicImplementation;
 using CSharpToolsAndTechnique.ExtensionMethods;
 using CSharpToolsAndTechnique.LinkedInTips;
+using CSharpToolsAndTechnique.DelegatesAndEvents;
 
 
 
-MathClassImplementation.MathVoidMethods();
+// Implementation of Deligates
+
+ImplementationofBasicConsept.DeligatesImplementation();
