@@ -9,4 +9,6 @@ using CSharpToolsAndTechnique.DelegatesAndEvents;
 
 // Implementation of Deligates
 
-ImplementationofBasicConsept.DeligatesImplementation();
+VideoEncoderImplementation videoEncoder = new VideoEncoderImplementation();
+
+videoEncoder.Implementation();
