@@ -4,11 +4,15 @@ using CSharpToolsAndTechnique.BasicImplementation;
 using CSharpToolsAndTechnique.ExtensionMethods;
 using CSharpToolsAndTechnique.LinkedInTips;
 using CSharpToolsAndTechnique.DelegatesAndEvents;
+using CSharpToolsAndTechnique.EventExplanation;
 
 
 
 // Implementation of Deligates
 
-VideoEncoderImplementation videoEncoder = new VideoEncoderImplementation();
+ButtonMasterImplementation Implementation = new ButtonMasterImplementation();
 
-videoEncoder.Implementation();
+
+
+Implementation.Implementation();
+
