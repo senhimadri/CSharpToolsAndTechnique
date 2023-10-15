@@ -8,7 +8,7 @@ using CSharpToolsAndTechnique.EventExplanation;
 using CSharpToolsAndTechnique.AccessModifier;
 
 
-DeligatesExerciseOneImplementation deligatesExerciseOne = new DeligatesExerciseOneImplementation();
-deligatesExerciseOne.Implementation();
+DeligateExerciseFour threeImp = new DeligateExerciseFour();
+threeImp.MethodThree();
 
 
