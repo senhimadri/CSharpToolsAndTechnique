@@ -8,18 +8,7 @@ using CSharpToolsAndTechnique.EventExplanation;
 using CSharpToolsAndTechnique.AccessModifier;
 
 
-
-// Implementation of Deligates
-
-//ButtonMasterImplementation Implementation = new ButtonMasterImplementation();
-
-
-
-//Implementation.Implementation();
-
-
-AccessModifierImplementation accessModifierImplementation = new AccessModifierImplementation();
-
-accessModifierImplementation.Implementation();
+DeligatesExerciseOneImplementation deligatesExerciseOne = new DeligatesExerciseOneImplementation();
+deligatesExerciseOne.Implementation();
 
 

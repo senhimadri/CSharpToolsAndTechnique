@@ -18,7 +18,6 @@ public class Person
 
 public class AccessModifierImplementation
 {
-
     public void Implementation()
     {
         var person = new Person();
@@ -26,7 +25,5 @@ public class AccessModifierImplementation
         person.SetBirthday(new DateTime(1997,01,01));
 
         Console.WriteLine(person.GetBirthdate());
-
-
     }
 }
