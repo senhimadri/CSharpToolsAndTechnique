@@ -5,14 +5,21 @@ using CSharpToolsAndTechnique.ExtensionMethods;
 using CSharpToolsAndTechnique.LinkedInTips;
 using CSharpToolsAndTechnique.DelegatesAndEvents;
 using CSharpToolsAndTechnique.EventExplanation;
+using CSharpToolsAndTechnique.AccessModifier;
 
 
 
 // Implementation of Deligates
 
-ButtonMasterImplementation Implementation = new ButtonMasterImplementation();
+//ButtonMasterImplementation Implementation = new ButtonMasterImplementation();
 
 
 
-Implementation.Implementation();
+//Implementation.Implementation();
+
+
+AccessModifierImplementation accessModifierImplementation = new AccessModifierImplementation();
+
+accessModifierImplementation.Implementation();
+
 
