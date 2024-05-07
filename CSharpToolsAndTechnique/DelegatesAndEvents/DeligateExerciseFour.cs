@@ -4,6 +4,7 @@ internal class DeligateExerciseFour
 {
     public delegate int MyDeligate(int intValue);
 
+
     public int MethodOne(int OneValue )
     {
         return OneValue * 5 ;
@@ -24,9 +25,8 @@ internal class DeligateExerciseFour
 
         int Result2 = myDeligate(10);
 
-        Console.WriteLine($"Method One : {Result1} , Method Two : {Result2}");
+        Console.WriteLine($"Method One : { Result1 } , Method Two : { Result2 }");
 
         Console.ReadLine();
     }
-
 }
