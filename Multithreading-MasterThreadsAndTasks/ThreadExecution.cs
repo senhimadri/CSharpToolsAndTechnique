@@ -45,7 +45,6 @@ public class ThreadExecution
         //ThreadStart obj = DemoMethods.ShowNumber;
         //ThreadStart obj = delegate () { DemoMethods.ShowNumber(); };
 
-
         ThreadStart obj = () => DemoMethods.ShowNumber();
         Thread thread = new Thread(obj);
 
