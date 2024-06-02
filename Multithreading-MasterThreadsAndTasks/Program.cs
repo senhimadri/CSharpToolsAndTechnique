@@ -14,28 +14,7 @@
 
 // Multi Thread Execution
 
-Console.WriteLine("Main Thread Started");
 
-Thread T1 = new Thread(Method1)
-{
-    Name = "Thread1"
-};
-
-Thread T2 = new Thread(Method2)
-{
-    Name = "Thread2"
-};
-
-Thread T3 = new Thread(Method3)
-{
-    Name = "Thread3"
-};
-
-T1.Start();
-T2.Start();
-T3.Start();
-
-Console.WriteLine("Main Thread Ended");
 
 Console.ReadLine();
 

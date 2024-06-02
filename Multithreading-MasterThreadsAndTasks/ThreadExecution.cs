@@ -1,0 +1,41 @@
+﻿namespace Multithreading_MasterThreadsAndTasks;
+
+public class ThreadExecution
+{
+    public void SingleThreadExecution()
+    {
+        DemoMethods.Method1();
+        Console.WriteLine("Method 1 Execution is completed");
+        DemoMethods.Method2();
+        Console.WriteLine("Method 2 Execution is completed");
+        DemoMethods.Method3();
+        Console.WriteLine("Method 3 Execution is completed");
+    }
+
+    public void MultiThreadExecution()
+    {
+        Console.WriteLine("Main Thread Started");
+
+        Thread T1 = new Thread(DemoMethods.Method1)
+        {
+            Name = "Thread1"
+        };
+
+        Thread T2 = new Thread(DemoMethods.Method2)
+        {
+            Name = "Thread2"
+        };
+
+        Thread T3 = new Thread(DemoMethods.Method3)
+        {
+            Name = "Thread3"
+        };
+
+        T1.Start();
+        T2.Start();
+        T3.Start();
+
+        Console.WriteLine("Main Thread Ended");
+    }
+}
+
