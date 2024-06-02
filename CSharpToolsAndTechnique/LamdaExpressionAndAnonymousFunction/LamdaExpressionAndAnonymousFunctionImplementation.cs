@@ -19,6 +19,9 @@ internal class LamdaExpressionAndAnonymousFunctionImplementation
             new PersonClass(){ Name = "Imdad", Age = 17},
         };
 
+        
+
+
 
         FilterDeligates filter = delegate (PersonClass P)
         {
