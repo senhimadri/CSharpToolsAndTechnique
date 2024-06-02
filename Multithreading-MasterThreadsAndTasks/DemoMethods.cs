@@ -1,4 +1,7 @@
 ﻿namespace Multithreading_MasterThreadsAndTasks;
+
+public delegate void SumOfCallBackVoid(int SumofNum);
+
 public static class DemoMethods
 {
     public static void Method1()
@@ -70,5 +73,31 @@ public class NumberHelper
     }
 
 }
+
+public class NumberHelperWithCallBack
+{
+    private readonly int _number;
+    private SumOfCallBackVoid _callbackDelegate;
+
+
+    public NumberHelperWithCallBack(int number, SumOfCallBackVoid callbackDelegate)
+                    => (_number, _callbackDelegate)=(number, callbackDelegate);
+
+    public void ShowNumbers()
+    {
+        int sum = 0;
+
+        for (int i = 0; i <= _number; i++)
+        {
+            sum+= i;
+        }
+
+        if (_callbackDelegate != null)
+            _callbackDelegate(sum);
+    }
+
+}
+
+
 
 

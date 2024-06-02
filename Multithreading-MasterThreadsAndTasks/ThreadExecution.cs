@@ -55,6 +55,27 @@ public class ThreadExecution
 
         thread.Start();
         thread2.Start();
+
     }
+
+    public void ConstructorOfThreadWithParameetrisedMethods()
+    {
+        void DisplayOfSumofNo(int sum)
+        {
+            Console.WriteLine("The Sum of number is" +sum);
+        }
+
+        SumOfCallBackVoid _callBack = new SumOfCallBackVoid(DisplayOfSumofNo);
+
+        NumberHelperWithCallBack _NumberHelperwithCallBack = new NumberHelperWithCallBack(10, _callBack);
+
+        ThreadStart obj3 = () => _NumberHelperwithCallBack.ShowNumbers();
+        Thread thread3 = new Thread(obj3);
+
+        thread3.Start();
+    }
+
+
+
 }
 
