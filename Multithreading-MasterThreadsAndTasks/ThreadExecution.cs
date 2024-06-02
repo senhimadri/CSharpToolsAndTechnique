@@ -137,10 +137,26 @@ public class ThreadExecution
         {
             for (int i = 0; i < 50000; i++)
             {
-                Interlocked.Increment(ref sum);
 
-                lock (_lock)
-                    sum+=i;
+
+                //Interlocked.Increment(ref sum);
+
+
+                //lock (_lock)
+                //    sum+=i;
+
+
+                bool lockTaken = false;
+                Monitor.Enter(_lock, ref lockTaken);
+                try
+                {
+                    sum++;
+                }
+                finally
+                {
+                    if (lockTaken)
+                        Monitor.Exit(_lock);
+                }
             }
         }
     }
