@@ -37,5 +37,38 @@ public static class DemoMethods
         }
         Console.WriteLine("Method3 Ended.");
     }
+
+    public static void ShowNumber()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+
+    public static void ShowNumber(int MaxValue)
+    {
+        for (int i = 0; i <= MaxValue; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
 }
+
+
+public class NumberHelper
+{
+    private readonly int _number;
+    public NumberHelper(int number) => _number= number;
+
+    public void ShowNumber()
+    {
+        for (int i = 0; i <= _number; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+
+}
+
 

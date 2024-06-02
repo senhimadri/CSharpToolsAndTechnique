@@ -37,5 +37,25 @@ public class ThreadExecution
 
         Console.WriteLine("Main Thread Ended");
     }
+
+
+    public void ConstructorsOfThread()
+    {
+        //ThreadStart obj = new ThreadStart(DemoMethods.ShowNumber);
+        //ThreadStart obj = DemoMethods.ShowNumber;
+        //ThreadStart obj = delegate () { DemoMethods.ShowNumber(); };
+
+
+        ThreadStart obj = () => DemoMethods.ShowNumber();
+        Thread thread = new Thread(obj);
+
+        NumberHelper _number = new NumberHelper(50);
+
+        ThreadStart obj2 = () => _number.ShowNumber();
+        Thread thread2 = new Thread(obj2);
+
+        thread.Start();
+        thread2.Start();
+    }
 }
 
