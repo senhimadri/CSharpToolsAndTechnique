@@ -56,6 +56,7 @@ public static class DemoMethods
             Console.WriteLine(i);
         }
     }
+
 }
 
 
@@ -97,6 +98,8 @@ public class NumberHelperWithCallBack
     }
 
 }
+
+
 
 
 

@@ -1,4 +1,7 @@
-﻿namespace Multithreading_MasterThreadsAndTasks;
+﻿using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
+
+namespace Multithreading_MasterThreadsAndTasks;
 
 public class ThreadExecution
 {
@@ -11,7 +14,6 @@ public class ThreadExecution
         DemoMethods.Method3();
         Console.WriteLine("Method 3 Execution is completed");
     }
-
     public void MultiThreadExecution()
     {
         Console.WriteLine("Main Thread Started");
@@ -37,8 +39,6 @@ public class ThreadExecution
 
         Console.WriteLine("Main Thread Ended");
     }
-
-
     public void ConstructorsOfThread()
     {
         //ThreadStart obj = new ThreadStart(DemoMethods.ShowNumber);
@@ -57,7 +57,6 @@ public class ThreadExecution
         thread2.Start();
 
     }
-
     public void ConstructorOfThreadWithParameetrisedMethods()
     {
         void DisplayOfSumofNo(int sum)
@@ -74,9 +73,7 @@ public class ThreadExecution
 
         thread3.Start();
     }
-
-
-    public void JoinInThread()
+    public void JoinAndIsAliveInThread()
     {
         Console.WriteLine("Main Thread Started");
 
@@ -99,6 +96,9 @@ public class ThreadExecution
         T2.Start();
         T3.Start();
 
+        if (T1.IsAlive)
+            Console.WriteLine("======================= Method 1 is still alive");
+
         T1.Join();
         Console.WriteLine("======================= Method 1 ");
         T2.Join();
@@ -106,10 +106,43 @@ public class ThreadExecution
         T3.Join();
         Console.WriteLine("======================= Method 3 ");
 
+        if (T1.IsAlive)
+            Console.WriteLine("======================= Method 1 is still alive");
+
         Console.WriteLine("Main Thread Ended");
 
     }
 
+    public static object _lock = new object();
+    public void ProtectingSharedResourcesConcurrentAccess()
+    {
+        int sum=0;
+        Stopwatch _watch = Stopwatch.StartNew();
+        Console.WriteLine("Main methods started.");
 
+        Thread T1 = new Thread(Addition);
+        Thread T2 = new Thread(Addition);
+        Thread T3 = new Thread(Addition);
+
+        T1.Start();T2.Start();T3.Start();
+
+        T1.Join();T2.Join(); T3.Join();
+
+        Console.WriteLine($"Total Sum is {sum}");
+        _watch.Stop();
+
+        Console.WriteLine($"Total Time is {_watch.ElapsedTicks}");
+
+        void Addition()
+        {
+            for (int i = 0; i < 50000; i++)
+            {
+                Interlocked.Increment(ref sum);
+
+                lock (_lock)
+                    sum+=i;
+            }
+        }
+    }
 }
 
