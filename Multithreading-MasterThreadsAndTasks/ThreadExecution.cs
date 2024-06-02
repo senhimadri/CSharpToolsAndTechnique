@@ -76,6 +76,40 @@ public class ThreadExecution
     }
 
 
+    public void JoinInThread()
+    {
+        Console.WriteLine("Main Thread Started");
+
+        Thread T1 = new Thread(DemoMethods.Method1)
+        {
+            Name = "Thread1"
+        };
+
+        Thread T2 = new Thread(DemoMethods.Method2)
+        {
+            Name = "Thread2"
+        };
+
+        Thread T3 = new Thread(DemoMethods.Method3)
+        {
+            Name = "Thread3"
+        };
+
+        T1.Start();
+        T2.Start();
+        T3.Start();
+
+        T1.Join();
+        Console.WriteLine("======================= Method 1 ");
+        T2.Join();
+        Console.WriteLine("======================= Method 2 ");
+        T3.Join();
+        Console.WriteLine("======================= Method 3 ");
+
+        Console.WriteLine("Main Thread Ended");
+
+    }
+
 
 }
 

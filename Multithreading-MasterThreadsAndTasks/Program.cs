@@ -2,6 +2,6 @@
 
 ThreadExecution exe = new();
 
-exe.ConstructorOfThreadWithParameetrisedMethods();
+exe.JoinInThread();
 
 Console.ReadLine();
