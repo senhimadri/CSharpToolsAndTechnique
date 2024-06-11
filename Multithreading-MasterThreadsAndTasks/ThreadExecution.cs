@@ -193,5 +193,17 @@ public class ThreadExecution
 
         }
     }
+
+    public void UnderstandingPulseWaitPulseAll()
+    {
+        Thread T1 = new Thread(DemoMethods.WriteContex);
+        Thread T2 = new Thread(DemoMethods.ReadContex);
+
+        T1.Start();
+        T2.Start();
+
+        T1.Join();
+        T2.Join();
+    }
 }
 

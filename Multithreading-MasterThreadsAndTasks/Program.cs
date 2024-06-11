@@ -2,6 +2,6 @@
 
 ThreadExecution exe = new();
 
-exe.UnderstandingThelock();
+exe.UnderstandingPulseWaitPulseAll();
 
 Console.ReadLine();

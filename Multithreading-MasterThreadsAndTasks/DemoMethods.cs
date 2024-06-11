@@ -57,6 +57,37 @@ public static class DemoMethods
         }
     }
 
+    public static object _lock = new object();
+    public static void WriteContex()
+    {
+        Monitor.Enter(_lock);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Monitor.Pulse(_lock);
+            Console.WriteLine($"Write Started {i}");
+            Console.WriteLine($"Write Ended {i}");
+            Monitor.Wait(_lock);
+        }
+
+        Monitor.Exit(_lock);
+
+    }
+
+    public static void ReadContex()
+    {
+        Monitor.Enter(_lock);
+        for (int i = 0; i < 5; i++)
+        {
+            Monitor.Pulse(_lock);
+            Console.WriteLine($"Read Started {i}");
+            Console.WriteLine($"Read Ended {i}");
+            Monitor.Wait(_lock);
+        }
+
+        Monitor.Exit(_lock);
+    }
+
 }
 
 
