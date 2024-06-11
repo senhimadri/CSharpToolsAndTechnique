@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Multithreading_MasterThreadsAndTasks;
@@ -158,6 +159,38 @@ public class ThreadExecution
                         Monitor.Exit(_lock);
                 }
             }
+        }
+    }
+
+    public void UnderstandingThelock()
+    {
+        
+
+        for (int i = 0; i < 10; i++)
+        {
+
+            //https://www.youtube.com/watch?v=Y8Go3c-brcg
+
+            //Task.Factory.StartNew(()=>
+            //{
+            //    Console.WriteLine($"Write the Serial Start : {i}");
+            //    Thread.Sleep(TimeSpan.FromSeconds(2));
+            //    Console.WriteLine($"Write the Serial End : {i}");
+            //});
+
+            Task.Factory.StartNew(() =>
+            {
+                lock(_lock)
+                {
+                    Console.WriteLine($"Write the Serial Start : {i}");
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
+                    Console.WriteLine($"Write the Serial End : {i}");
+
+
+                }
+            });
+
+
         }
     }
 }

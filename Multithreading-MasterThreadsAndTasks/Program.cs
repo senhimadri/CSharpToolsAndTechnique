@@ -2,6 +2,6 @@
 
 ThreadExecution exe = new();
 
-exe.ProtectingSharedResourcesConcurrentAccess();
+exe.UnderstandingThelock();
 
 Console.ReadLine();
