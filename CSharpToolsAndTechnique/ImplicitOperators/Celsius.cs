@@ -27,5 +27,6 @@ public class ImplicitOperatorsProgramImplementation
 		Fahrenheit fahrenheit = cel;
 
 		Console.WriteLine(fahrenheit._value);
+
 	}
 }

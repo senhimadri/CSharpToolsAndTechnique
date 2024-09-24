@@ -2,6 +2,8 @@
 
 ImplicitOperatorsProgramImplementation.Main();
 
+Console.ReadLine();
+
 
 
 
