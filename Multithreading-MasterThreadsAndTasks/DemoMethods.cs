@@ -88,6 +88,19 @@ public static class DemoMethods
         Monitor.Exit(_lock);
     }
 
+
+    public static void WriteContex_01()
+    {
+        Console.WriteLine($"Write Started");
+        Console.WriteLine($"Write Ended");
+    }
+
+    public static void ReadContex_01()
+    {
+        Console.WriteLine($"Read Started");
+        Console.WriteLine($"Read Ended");
+    }
+
 }
 
 

@@ -205,5 +205,16 @@ public class ThreadExecution
         T1.Join();
         T2.Join();
     }
+
+
+
+    static ManualResetEvent _mre = new ManualResetEvent(false);
+    public void ImplementingManualResetEvent()
+    {
+        //https://www.youtube.com/watch?v=DVnk5fn3gZw&list=PL5Agzt13Z4g9KHIyr0xRIrrfqlDPLMp-t&index=17
+
+
+
+    }
 }
 
